@@ -1,21 +1,28 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
+import  {signin}  from '../../actions/user';
+// import { useDispatch } from "react-redux";
 const initailState = {
   email: "",
   password: "",
 };
 export default function Login() {
+  const history=useNavigate();
 
   const [formData, setformData] = useState(initailState);
   const onChange = (e) => {
     setformData({ ...formData, [e.target.name]: e.target.value })
   }
+
+
   const handleLogin = (e) => {
     e.preventDefault();
-    //   dispatch(signup(formData,history));
+    
+     signin(formData);
+     //dispatch(signin(formData,history));
+    
   }
-  if (formData) {
-    console.log(formData);
-  }
+
   return (
     <section className="vh-100" style={{ backgroundcolor: "#eee" }}>
       <div className="container h-100">

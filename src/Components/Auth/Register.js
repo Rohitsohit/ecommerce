@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom'
-
+import { signup } from "../../actions/user";
 const initailState ={
     firstName :"",
     email:"",
@@ -17,6 +17,7 @@ export default function Signup() {
     }
     const handleRegister=(e)=>{
       e.preventDefault();
+      signup(formData);
     //   dispatch(signup(formData,history));
     }
     if(formData){
@@ -64,9 +65,9 @@ export default function Signup() {
                       <button type="button" onClick={handleRegister} className="btn btn-primary btn-lg">Register</button>
                     </div>
                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    {/* <Link  to='/signin' >
+                    <Link  to='/signin' >
                       <h6 >Already Register ? </h6>
-                      </Link> */}
+                      </Link>
                     </div>
                   </form>
   
