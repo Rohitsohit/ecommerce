@@ -34,15 +34,13 @@ export const signin = async (req, res) => {
 
 export const signup = async (req, res) => {
 
-  const { email, password, confirmPassword, firstName } = req.body;
+  const { email, password, name } = req.body;
   
   try {
     const existingUser = await userSchema.findOne({ email });
     if (existingUser)
     return res.status(400).json({ message: "User already exist." });
     
-    if (password !== confirmPassword)
-    return res.status(400).json({ message: "Passowrd not match" });
     
     
     const hashedPassword = await bcrypt.hash(password,12);
@@ -51,7 +49,7 @@ export const signup = async (req, res) => {
     const myUser = await userSchema.create({
       email,
       password: hashedPassword,
-      name: `${firstName}`,
+      name: `${name}`,
     });
     const token = jwt.sign({ email: myUser.email, id: myUser._id }, "test", {
       expiresIn: "1h",

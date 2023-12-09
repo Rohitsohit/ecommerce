@@ -11,4 +11,4 @@ const userSchema = mongoose.Schema({
 
 })
 
-export default mongoose.model('ShopperUsers', userSchema);;
+export default mongoose.model('ShopperUsers', userSchema);
