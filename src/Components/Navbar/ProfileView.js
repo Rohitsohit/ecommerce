@@ -38,9 +38,9 @@ export default function Profileview() {
     </nav>
   ) : (
     <>
-      <Link to="/auth">
+      <Link to="/login">
         <button type="button mx-3" className="btn btn-dark">
-          SignIn
+          Log In 
         </button>
       </Link>
     
