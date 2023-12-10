@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from 'react-router-dom'
-import ProfileView from "./ProfileView";
+
+import Profileview from './ProfileView'
+
+import { useDispatch } from "react-redux";
+import { getCartProducts } from "../../actions/product"
 
 export default function Navbar() {
-
+  
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-light">
@@ -26,8 +30,8 @@ export default function Navbar() {
               <button type="button"
                 className="btn btn-dark mx-5" >Cart</button>
             </Link>
-            <ProfileView></ProfileView>
-    
+            <Profileview ></Profileview>
+
           </div>
         </div>
       </nav>

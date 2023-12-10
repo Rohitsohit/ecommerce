@@ -5,11 +5,12 @@ import userSchema from "../Models/userStorage.js";
 
 
 export const signin = async (req, res) => {
-  console.log(req.body);
   const { email, password } = req.body;
-  
+
   try {
     const myUser = await userSchema.findOne({ email });
+
+
     if (!myUser)
 
       return res.status(404).json({ message: "User doesn't exist." });
@@ -35,13 +36,13 @@ export const signin = async (req, res) => {
 
 export const signup = async (req, res) => {
 
-  const { email, password, name } = req.body;
+  const { email, password, firstName } = req.body;
   
   try {
     const existingUser = await userSchema.findOne({ email });
     if (existingUser)
     return res.status(400).json({ message: "User already exist." });
-    
+ 
     
     
     const hashedPassword = await bcrypt.hash(password,12);
@@ -50,7 +51,7 @@ export const signup = async (req, res) => {
     const myUser = await userSchema.create({
       email,
       password: hashedPassword,
-      name: `${name}`,
+      name: `${firstName}`,
     });
     const token = jwt.sign({ email: myUser.email, id: myUser._id }, "test", {
       expiresIn: "1h",
