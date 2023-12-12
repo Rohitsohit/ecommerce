@@ -11,6 +11,16 @@ export  const getProducts = () => async (dispatch) => {
      }
    };
 
+   export  const getProductById = async(id) => {
+    try {
+      const  data  = await api.fetchProductById(id);
+      
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
    export const addProduct=(formData)=>async(dispatch)=>{
         try {

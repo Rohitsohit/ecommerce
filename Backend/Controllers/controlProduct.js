@@ -11,6 +11,20 @@ export const getProducts = async (req, res) => {
      }
    };
 
+   export const getProductById = async (req, res) => {
+    const id = req.params;
+     console.log(id);
+    try {
+      const productData = await dataStore.findOne(id);
+      
+      console.log(productData);
+      res.status(200).send(productData);
+      
+    } catch (error) {
+      res.status(404).json({ message: error.message });
+    }
+  };
+
    export const storeProducts = async (req, res) => {
         const  data  = req.body;
         

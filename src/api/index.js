@@ -3,6 +3,9 @@ const API = axios.create({baseURL:'http://localhost:5001'})
 
 
 export const fetchProducts=()=>API.get('/products');
+
+export const fetchProductById=(id)=>API.get(`/products/${id}`);
+
 export const getCartProduct = (formData)=> API.post('/products/cartProduct',formData);
 export const addProduct = (formData)=>API.post('/products/addToCart',formData);
 export const itemDelete = (formData)=>API.post('/products/itemDelete',formData);
