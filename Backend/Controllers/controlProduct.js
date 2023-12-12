@@ -13,11 +13,11 @@ export const getProducts = async (req, res) => {
 
    export const getProductById = async (req, res) => {
     const id = req.params;
-     console.log(id);
+     console.log(id.id);
     try {
-      const productData = await dataStore.findOne(id);
+      const productData = await dataStore.findById(id.id);
       
-      console.log(productData);
+    
       res.status(200).send(productData);
       
     } catch (error) {
