@@ -1,23 +1,36 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getProductById } from '../../actions/product';
+import { getProductById} from '../../actions/product';
 import { Link } from 'react-router-dom';
+import Marquee from "react-fast-marquee";
+import SimilarProducts from './SimilarProducts';
+import { useSelector } from 'react-redux';
 export default function () {
     const productId = useParams();
     
-    const [product, setproduct] = useState(null);
+    const [product, setproduct] = useState();
+    const [similarProducts, setsimilarProducts] = useState();
 
-    useEffect(() => {
-      
-      productData();
-      
-    }, [])
+    var allProducts = useSelector((state) => state.product);
     
-    const productData= async()=>{
-      var data = await getProductById(productId.id);
-      setproduct(data.data);
-    }
 
+    useEffect(() => {  
+      const productData = async () => {
+        try {
+          const data = await getProductById(productId.id);
+          setproduct(data.data);
+          const similarProductList = allProducts.filter(
+            (item) => item.productCategory === data.data.productCategory
+          );
+          setsimilarProducts(similarProductList);
+        } catch (error) {
+          console.error('Error fetching product data:', error);
+        }
+      };
+    
+      productData();
+    }, [productId.id, allProducts]);
+    
     const addProduct = ()=>{
 
     }
@@ -55,7 +68,29 @@ export default function () {
   </div>
 </div>
 )}
+    <div className="container">
+    <div className="row my-5 py-5">
+      <div className="d-none d-md-block">
+      <h2 className="">You may also Like</h2>
+        <Marquee
+          pauseOnHover={true}
+          pauseOnClick={true}
+          speed={50}
+        >
+          {similarProducts &&(
+            similarProducts.map((product) => (
+            
+            <SimilarProducts product={product}></SimilarProducts>
     
+      )))
+          }
+          
+        </Marquee>
+      </div>
+    </div>
+  </div>
+
+  
     </>
 
   )
