@@ -8,7 +8,7 @@ import Cart from "./Components/Cart/Cart";
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import AUTH from './Components/Auth/Register'
 import Signin from "./Components/Auth/Login";
-
+import ProductDetails from "./Components/showDetails/ProductDetails";
 const App = () => {
   const dispatch =useDispatch();
   
@@ -33,7 +33,9 @@ const App = () => {
       <Routes>
       <Route path="/login" exact element={<Signin/> } />
       </Routes>
-    
+      <Routes>
+      <Route path="/productdetails/:id" exact element={<ProductDetails/> } />
+      </Routes>
   </Router>
    
   

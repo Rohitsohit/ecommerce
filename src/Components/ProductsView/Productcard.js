@@ -1,10 +1,10 @@
 
 import { useDispatch } from "react-redux";
 import { addProduct } from '../../actions/product';
-
+import { useNavigate } from 'react-router-dom';
 export default function Productcard({product}) {
   const dispatch = useDispatch();
- 
+  const history = useNavigate();
   
   
   const  handleId=()=>{
@@ -18,7 +18,9 @@ export default function Productcard({product}) {
       dispatch(addProduct(initailData));
     }
   }
- 
+ const showProduct = ()=>{
+  history(`/productdetails/${product._id}`);
+ }
   
   return (
     <div className='col-md-3'>
@@ -28,7 +30,11 @@ export default function Productcard({product}) {
        <h5 className="card-title"  >{product.productName}</h5>
        <p className="card-text"  >{product.productDescription}</p>
        <p className="card-text fw-semibold"  >{product.productPrice}</p>
-       <button className="btn btn-primary" onClick={handleId}>Add to cart</button>
+       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+       <button className="btn btn-outline-dark btn-sm m-2y" onClick={showProduct}>Show Details</button>
+
+      <button className="btn btn-outline-dark btn-sm m-2y mx-3" onClick={handleId}>Add to cart</button>
+      </div>
      </div>
    </div>
    </div>
