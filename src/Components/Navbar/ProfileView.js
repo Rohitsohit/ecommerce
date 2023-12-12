@@ -39,7 +39,7 @@ export default function Profileview() {
   ) : (
     <>
       <Link to="/login">
-        <button type="button mx-3" className="btn btn-dark">
+        <button type="button mx-3" className="btn btn-outline-dark">
           Log In 
         </button>
       </Link>

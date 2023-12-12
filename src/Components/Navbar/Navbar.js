@@ -21,7 +21,7 @@ export default function Navbar() {
             </form>
             <Link className="navbar-brand" to='/cart'>
               <button type="button"
-                className="btn btn-dark mx-5" >Cart</button>
+                className="btn btn-outline-dark mx-5" >Cart</button>
             </Link>
             <Profileview ></Profileview>
 

@@ -56,7 +56,7 @@ export default function Signin() {
                     </div>
                   </div>
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" onClick={handleLogIn} className="btn btn-primary btn-lg">Log In</button>
+                    <button type="button" onClick={handleLogIn} className="btn btn-outline-dark">Log In</button>
                   </div>
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                   <Link  to='/register' >

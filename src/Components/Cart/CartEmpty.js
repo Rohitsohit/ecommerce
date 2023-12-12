@@ -16,7 +16,7 @@ export default function CartEmpty() {
                              <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3"/>
                              <h3><strong>Your Cart is Empty</strong></h3>
                              <h4>SignIn/SignUp</h4>
-                             <a href="/" class="btn btn-primary cart-btn-transform m-3" data-abc="true">continue shopping</a>
+                             <a href="/" class="btn btn-outline-dark cart-btn-transform m-3" data-abc="true">continue shopping</a>
                              
                         
                         </div>

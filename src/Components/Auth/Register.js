@@ -61,11 +61,11 @@ export default function Auth() {
                  
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" onClick={handleRegister} className="btn btn-primary btn-lg">Register</button>
+                    <button type="button" onClick={handleRegister} className="btn btn-outline-dark">Register</button>
                   </div>
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                   <Link  to='/login' >
-                    <h6 >Already Register ? </h6>
+                    <h6 className="outline-dark" >Already Register ? </h6>
                     </Link>
                   </div>
                 </form>

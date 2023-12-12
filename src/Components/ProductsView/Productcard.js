@@ -27,8 +27,8 @@ export default function Productcard({product}) {
      <div className="card shadow-lg p-3 mb-5 bg-body rounded rounded-lg " style={{ width: "15rem" }} >
      <img src={product.productImage} height="150" width="120" className="card-img-top" alt="productImage"/>
      <div className="card-body">
-       <h5 className="card-title"  >{product.productName}</h5>
-       <p className="card-text"  >{product.productDescription}</p>
+       <h5 className="card-title"  >{product.productName.substring(0,20)}...</h5>
+       <p className="card-text"  >{product.productDescription.substring(0,40)}...</p>
        <p className="card-text fw-semibold"  >{product.productPrice}</p>
        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
        <button className="btn btn-outline-dark btn-sm m-2y" onClick={showProduct}>Show Details</button>
