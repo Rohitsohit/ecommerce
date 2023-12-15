@@ -5,7 +5,7 @@ import Productcard from "./ProductsView/Productcard";
 import Spinner from "./Spinner/Spinner";
 export default function Productview() {
   
-  var data = useSelector((state) => state.product);
+  const data = useSelector((state) => state.product);
 
   const [productData, setproductData] = useState();
   const handleCategory=(cat)=>{
@@ -15,7 +15,7 @@ export default function Productview() {
   }
   useEffect(() => {
     setproductData(data);
-  }, [])
+  }, [data])
   
   return !productData ? (
     <Spinner />

@@ -9,6 +9,9 @@ const formData ={
 };
 export default function Items(product) {
   const dispatch = useDispatch();
+
+
+
   const DeleteItemHandle = ()=>{
     const data=JSON.parse(localStorage.getItem("profile-shoper"))
     formData.productId = product.product._id; 
@@ -49,7 +52,7 @@ export default function Items(product) {
          
          <button
            type="button"
-           className="btn btn-primary btn-sm me-1 mb-2"
+           className="btn btn-outline-dark btn-sm me-1 mb-2"
            data-mdb-toggle="tooltip"
            title="Remove item"
            onClick={DeleteItemHandle}
@@ -62,10 +65,10 @@ export default function Items(product) {
        <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
          <div className="d-flex mb-4" style={{ maxwidth: "300px" }}>
            <button
-             className="btn btn-primary px-3 me-2"
+             className="btn btn-outline-dark px-3 me-2"
              
            >
-             <i className="fas fa-minus"></i>
+             <i className=" fas fa-minus"></i>
            </button>
 
            <div className="form-outline">
@@ -83,7 +86,7 @@ export default function Items(product) {
            </div>
 
            <button
-             className="btn btn-primary px-3 ms-2"
+             className="btn btn-outline-dark px-3 ms-2"
              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
            >
              <i className="fas fa-plus"></i>

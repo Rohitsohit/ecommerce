@@ -4,17 +4,20 @@ import { getProductById} from '../../actions/product';
 import { Link } from 'react-router-dom';
 import Marquee from "react-fast-marquee";
 import SimilarProducts from './SimilarProducts';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { addProduct } from '../../actions/product';
+
 export default function () {
     const productId = useParams();
-    
+    const dispatch = useDispatch();
     const [product, setproduct] = useState();
     const [similarProducts, setsimilarProducts] = useState();
-
     var allProducts = useSelector((state) => state.product);
-    
+    const user =JSON.parse(localStorage.getItem("profile-shoper"))
 
-    useEffect(() => {  
+    useEffect(() => { 
+      window.scrollTo(0, 0);
+      
       const productData = async () => {
         try {
           const data = await getProductById(productId.id);
@@ -31,8 +34,14 @@ export default function () {
       productData();
     }, [productId.id, allProducts]);
     
-    const addProduct = ()=>{
-
+    const addingProduct = ()=>{
+      if(user){
+        const userEmail = user.data.data.myUser.email;
+        const initailData={email:"",productId:""};
+        initailData.email=userEmail
+        initailData.productId=productId.id;
+        dispatch(addProduct(initailData));
+      }
     }
 
   return (
@@ -57,7 +66,7 @@ export default function () {
       <p className="lead">{product.productDescription}</p>
       <button
         className="btn btn-outline-dark"
-        onClick={() => addProduct()}
+        onClick={() => addingProduct()}
       >
         Add to Cart
       </button>

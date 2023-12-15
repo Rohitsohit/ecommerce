@@ -24,6 +24,7 @@ export  const getProducts = () => async (dispatch) => {
 
    export const addProduct=(formData)=>async(dispatch)=>{
         try {
+            
              const {data} = await api.addProduct(formData);
              dispatch({type:CART,cartData:data});
         } catch (error) {
@@ -35,6 +36,7 @@ export  const getProducts = () => async (dispatch) => {
 
 export  const getCartProducts = (formData) => async (dispatch) => {
      try {
+     
        const { data } = await api.getCartProduct(formData);
        dispatch({ type: CARTDATA, cartProduct: data });
      } catch (error) {

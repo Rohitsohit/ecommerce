@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from 'react-router-dom'
 import Profileview from './ProfileView'
+import { useSelector } from "react-redux";
 export default function Navbar() {
+  
   
   return (
     <>
@@ -21,7 +23,7 @@ export default function Navbar() {
             </form>
             <Link className="navbar-brand" to='/cart'>
               <button type="button"
-                className="btn btn-outline-dark mx-5" >Cart</button>
+                className="btn btn-outline-dark mx-5" >Cart {}</button>
             </Link>
             <Profileview ></Profileview>
 

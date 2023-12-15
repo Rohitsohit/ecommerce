@@ -7,7 +7,7 @@ export default function Productcard({product}) {
   const history = useNavigate();
   
   
-  const  handleId=()=>{
+  const  handleCart=()=>{
     const user =JSON.parse(localStorage.getItem("profile-shoper"))
     if(user){
 
@@ -33,7 +33,7 @@ export default function Productcard({product}) {
        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
        <button className="btn btn-outline-dark btn-sm m-2y" onClick={showProduct}>Show Details</button>
 
-      <button className="btn btn-outline-dark btn-sm m-2y mx-3" onClick={handleId}>Add to cart</button>
+      <button className="btn btn-outline-dark btn-sm m-2y mx-3" onClick={handleCart}>Add to cart</button>
       </div>
      </div>
    </div>
