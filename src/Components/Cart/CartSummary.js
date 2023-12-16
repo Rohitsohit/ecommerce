@@ -1,9 +1,17 @@
 import React from "react";
-
+import axios from "axios";
 export default function CartSummary(priceData) {
   
+  var cartProduct = priceData.cartProduct;
+  const user = JSON.parse(localStorage.getItem("profile-shoper"));
+  const userId = user ? user.data.data.myUser.id : null;
   const handleCheckout = ()=>{
-        console.log("payment is ready")
+    axios.post("http://localhost:5001/stripe/create-checkout-session",{cartProduct,
+    userId: userId
+    },).then((res)=>{
+        window.location.href = res.data.url
+
+    }).catch((error)=> console.log(error))
   }
 
   return (
@@ -43,6 +51,9 @@ export default function CartSummary(priceData) {
     </div>
   </div>
 </div>
+
+
+
 
   );
 }

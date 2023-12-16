@@ -64,7 +64,8 @@ export default function Cart() {
             </div>
             {/*cart summary  */}
 
-            <CartSummary price={price} totalPrice={totalPrice} productName={productName} />
+            <CartSummary price={price} totalPrice={totalPrice} productName={productName} cartProduct={cartProduct} />
+            
           </div>
         </div>
       </section>

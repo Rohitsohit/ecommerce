@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import AUTH from './Components/Auth/Register'
 import Signin from "./Components/Auth/Login";
 import ProductDetails from "./Components/showDetails/ProductDetails";
+import CheckOutSuccess from "./Components/Stripe/CheckOutSuccess";
 const App = () => {
   const dispatch =useDispatch();
   
@@ -32,6 +33,9 @@ const App = () => {
       </Routes>
       <Routes>
       <Route path="/login" exact element={<Signin/> } />
+      </Routes>
+      <Routes>
+      <Route path="/checkout-success" exact element={<CheckOutSuccess/> } />
       </Routes>
       <Routes>
       <Route path="/productdetails/:id" exact element={<ProductDetails/> } />
