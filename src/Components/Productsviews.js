@@ -11,7 +11,6 @@ export default function Productview() {
   const handleCategory=(cat)=>{
     const updatedList = data.filter((item) => item.productCategory === cat);
     setproductData(updatedList);
-
   }
   useEffect(() => {
     setproductData(data);
