@@ -29,7 +29,7 @@ export default function Productcard({product}) {
      <div className="card-body">
        <h5 className="card-title"  >{product.productName.substring(0,20)}...</h5>
        <p className="card-text"  >{product.productDescription.substring(0,40)}...</p>
-       <p className="card-text fw-semibold"  >{product.productPrice}</p>
+       <p className="card-text fw-semibold"  >$ {product.productPrice}</p>
        <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
        <button className="btn btn-outline-dark btn-sm m-2y" onClick={showProduct}>Show Details</button>
 

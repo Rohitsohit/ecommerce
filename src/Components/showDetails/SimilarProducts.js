@@ -26,7 +26,7 @@ export default function SimilarProducts(product) {
                     </h5>
                   </div>
                   <ul className="list-group list-group-flush">
-                    <li className="list-group-item lead">{product.product.productPrice}</li>
+                    <li className="list-group-item lead"> $ {product.product.productPrice}</li>
                   </ul>
                   <div className="card-body">
                     <button

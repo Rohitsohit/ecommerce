@@ -28,7 +28,7 @@ export default function CartSummary(priceData) {
               <strong>{name} ({1})</strong>
             </div>
             <div>
-              <strong>${priceData.price[index]}</strong>
+              <strong>$ {priceData.price[index]}</strong>
             </div>
           </li>
         ))}
@@ -40,7 +40,7 @@ export default function CartSummary(priceData) {
             <strong>Total amount (including Taxes)</strong>
           </div>
           <span>
-            <strong>${priceData.totalPrice}</strong>
+            <strong>$ {priceData.totalPrice}</strong>
           </span>
         </li>
       </ul>

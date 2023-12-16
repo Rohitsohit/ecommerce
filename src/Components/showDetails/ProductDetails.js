@@ -62,7 +62,7 @@ export default function () {
       <h4 className="text-uppercase text-muted">{product.productCategory}</h4>
       <h1 className="display-5">{product.productName}</h1>
      
-      <h3 className="display-6  my-4">{product.productPrice}</h3>
+      <h3 className="display-6  my-4">$ {product.productPrice}</h3>
       <p className="lead">{product.productDescription}</p>
       <button
         className="btn btn-outline-dark"

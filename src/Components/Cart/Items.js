@@ -94,7 +94,7 @@ export default function Items(product) {
          </div>
 
          <p className="text-start text-md-center">
-           <strong>{product.product.productPrice}</strong>
+           <strong>$ {product.product.productPrice}</strong>
          </p>
        </div>
      </div>
