@@ -5,9 +5,8 @@ import productData from './Routes/productData.js'
 import users from './Routes/user.js'
 import stripe from "./Routes/stripe.js"
 import 'dotenv/config'
-const CONNECTION_URL = process.env.MONGO_URL ||
-  "mongodb+srv://Rohit:123@cluster0.xqoa6nc.mongodb.net/?retryWrites=true&w=majority";
-const PORT = process.env.PORT||5001;
+const CONNECTION_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json())
