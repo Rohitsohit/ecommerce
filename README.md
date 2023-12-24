@@ -20,12 +20,6 @@ This project is a web application built using React, MongoDB, Express, Node.js, 
 
 The project is deployed on Render, a cloud platform for hosting web applications. You can access the live version of the website [here](your-render-app-url).
 
-## Screenshots
-
-![Screenshot 1]((example1.png))
-![Screenshot 2](/Users/rohit/Documents/React/ecommerce/example2.png)
-![Screenshot 3](/Users/rohit/Documents/React/ecommerce/example3.png)
-![Screenshot 4](/Users/rohit/Documents/React/ecommerce/example4.png)
 
 ## Getting Started
 
@@ -85,7 +79,7 @@ Follow these steps to run the project locally:
    npm start
    ```
 
-4. Access the application at https://ecomerce-frontend.onrender.com/ in your web browser.
+4. Access the application at live https://ecomerce-frontend.onrender.com/ on render.
 
 ## Contributing
 
