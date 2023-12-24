@@ -20,6 +20,7 @@ This project is a web application built using React, MongoDB, Express, Node.js, 
 
 The project is deployed on Render, a cloud platform for hosting web applications. You can access the live version of the website [here](your-render-app-url).
 
+![Alt text](example3.png)
 
 ## Getting Started
 
