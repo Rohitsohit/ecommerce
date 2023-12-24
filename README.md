@@ -18,7 +18,7 @@ This project is a web application built using React, MongoDB, Express, Node.js, 
 
 ## Deployment
 
-The project is deployed on Render, a cloud platform for hosting web applications. You can access the live version of the website [here](your-render-app-url).
+The project is deployed on Render, a cloud platform for hosting web applications. You can access the live version of the website [here](https://ecomerce-frontend.onrender.com/).
 
 ## Screenshots
 
