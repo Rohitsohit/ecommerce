@@ -22,7 +22,7 @@ The project is deployed on Render, a cloud platform for hosting web applications
 
 ## Screenshots
 
-![Screenshot 1](/Users/rohit/Documents/React/ecommerce/example1.png)
+![Screenshot 1]((example1.png))
 ![Screenshot 2](/Users/rohit/Documents/React/ecommerce/example2.png)
 ![Screenshot 3](/Users/rohit/Documents/React/ecommerce/example3.png)
 ![Screenshot 4](/Users/rohit/Documents/React/ecommerce/example4.png)
