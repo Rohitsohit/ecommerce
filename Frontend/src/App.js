@@ -15,8 +15,10 @@ const App = () => {
   
   useEffect(()=>{
     dispatch(getProducts());
+    // to run my backend because my render make the backend inactive.
+    const newLink = 'https://ecomerce-backend-7c5j.onrender.com/';
+    window.open(newLink, '_blank', 'noopener,noreferrer');
   },[]);
-  
   
   return (     
   <>
