@@ -15,9 +15,7 @@ export default function Cart() {
   const userEmail = user ? user.data.data.myUser.email : null;
   
   useEffect(() => {
-
     dispatch(getCartProducts({ userEmail }));
-    
   },[]); 
 
   var price = []
@@ -25,8 +23,9 @@ export default function Cart() {
   var totalPrice = 0;
 
   cartProduct.forEach(element => {
-    var productPrice = parseInt(element.productPrice.slice(1))
+    var productPrice = parseInt(element.productPrice)
     totalPrice = totalPrice + productPrice;
+   
     price.push(productPrice);
   });
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { signin } from "../../actions/user"
 import { Link } from 'react-router-dom'
 const initailState = {
@@ -9,6 +9,7 @@ const initailState = {
 };
 export default function Signin() {
   const [formData, setformData] = useState(initailState);
+  
   const history = useNavigate();
   const dispatch = useDispatch();
 
@@ -18,10 +19,10 @@ export default function Signin() {
 
   const handleLogIn = (e) => {
     e.preventDefault();
-    console.log(formData)
-    dispatch(signin(formData, history));
-  }
+     dispatch(signin(formData, history));
 
+  }
+  
 
   return (
     <>

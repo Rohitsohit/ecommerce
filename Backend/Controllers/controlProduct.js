@@ -44,7 +44,7 @@ export const getProducts = async (req, res) => {
     const productObject=await dataStore.findOne({_id:productId});
   
     
-    const updateData= await userSchema.findOneAndUpdate({email:email},{$push:{cart:productObject}});
+     await userSchema.findOneAndUpdate({email:email},{$push:{cart:productObject}});
     try {
     res.send("Product Added to Cart"); 
   } catch (error) {

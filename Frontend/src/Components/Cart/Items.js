@@ -7,6 +7,9 @@ const formData ={
   email:"",
   productId :"",
 };
+
+
+
 export default function Items(product) {
   const dispatch = useDispatch();
 
@@ -17,6 +20,12 @@ export default function Items(product) {
     formData.productId = product.product._id; 
     formData.email = data.data.data.myUser.email; 
     dispatch(getItemDelete(formData));
+  }
+  const handleMinus=()=>{
+    console.log('Minus')
+  }
+  const handlePlus = ()=>{
+    console.log("plus")  
   }
 
   return (
@@ -65,6 +74,7 @@ export default function Items(product) {
        <div className="col-lg-4 col-md-6 mb-4 mb-lg-0">
          <div className="d-flex mb-4" style={{ maxwidth: "300px" }}>
            <button
+           onClick={handleMinus}
              className="btn btn-outline-dark px-3 me-2"
              
            >
@@ -87,7 +97,7 @@ export default function Items(product) {
 
            <button
              className="btn btn-outline-dark px-3 ms-2"
-             onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+             onClick={handlePlus}
            >
              <i className="fas fa-plus"></i>
            </button>
