@@ -8,12 +8,8 @@ const formData ={
   productId :"",
 };
 
-
-
 export default function Items(product) {
   const dispatch = useDispatch();
-
-
 
   const DeleteItemHandle = ()=>{
     const data=JSON.parse(localStorage.getItem("profile-shoper"))

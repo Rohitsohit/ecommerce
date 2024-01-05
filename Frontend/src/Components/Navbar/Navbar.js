@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import Profileview from './ProfileView'
 import { useSelector } from "react-redux";
 export default function Navbar() {
-  
+
+    useEffect(() => {
+    }, [])
+    
   
   return (
     <>
@@ -28,7 +31,7 @@ export default function Navbar() {
       </form>
 
       <Link className="navbar-brand" to='/cart'>
-        <button type="button" className="btn btn-outline-dark mx-2">Cart {}</button>
+        <button type="button" className="btn btn-outline-dark mx-2">Cart</button>
       </Link>
       
       <Profileview />
