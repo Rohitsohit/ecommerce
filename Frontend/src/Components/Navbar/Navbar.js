@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from 'react-router-dom'
 import Profileview from './ProfileView'
-import { useSelector } from "react-redux";
 export default function Navbar() {
 
-    useEffect(() => {
-    }, [])
     
-  
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
