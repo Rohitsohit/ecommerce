@@ -16,6 +16,9 @@ app.use('/products', productData);
 app.use('/user', users);
 app.use('/stripe', stripe);
 
+app.get("/",(res,req)=>{
+  res.json("hello");
+})
 
 app.use(cors({
   origin: ["https://deploy-mern-1whq.vercel.app"],
