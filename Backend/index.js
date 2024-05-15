@@ -12,9 +12,16 @@ const app = express();
 app.use(express.json())
 app.use(cors());
 
-app.use('/products',productData);
-app.use('/user',users);
-app.use('/stripe',stripe);
+app.use('/products', productData);
+app.use('/user', users);
+app.use('/stripe', stripe);
+
+
+app.use(cors({
+  origin: ["https://deploy-mern-1whq.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}))
 
 
 mongoose

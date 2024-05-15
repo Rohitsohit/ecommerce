@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import Productcard from "./ProductsView/Productcard";
 import Spinner from "./Spinner/Spinner";
 export default function Productview() {
-  
+  const state = useSelector((state) => state);
+  console.log(state)
   const data = useSelector((state) => state.product);
 
   const [productData, setproductData] = useState();
