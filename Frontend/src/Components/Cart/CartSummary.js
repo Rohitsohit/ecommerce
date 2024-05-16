@@ -6,7 +6,7 @@ export default function CartSummary(priceData) {
   const user = JSON.parse(localStorage.getItem("profile-shoper"));
   const userId = user ? user.data.data.myUser.id : null;
   const handleCheckout = ()=>{
-    axios.post("https://ecomerce-backend-7c5j.onrender.com/stripe/create-checkout-session",{cartProduct,
+    axios.post("https://ecommerce-tawny-pi-19.vercel.app/stripe/create-checkout-session",{cartProduct,
     userId: userId
     },).then((res)=>{
         window.location.href = res.data.url
