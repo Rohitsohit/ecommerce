@@ -1,5 +1,5 @@
 import axios from "axios";
-const API = axios.create({baseURL:''})
+const API = axios.create({baseURL:'https://ecomerce-backend-7c5j.onrender.com'})
 
 
 export const fetchProducts=()=>API.get('/products');
