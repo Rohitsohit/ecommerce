@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
 })
 
 app.use(cors({
-  origin: ["https://ecommerce-frontend-alpha-one.vercel.app"],
+  origin: ["https://ecommerce-frontend-alpha-one.vercel.app/"],
   methods: ["POST", "GET"],
   credentials: true
 }))
