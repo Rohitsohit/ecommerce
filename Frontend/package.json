@@ -2,7 +2,7 @@
   "name": "shoper",
   "version": "0.1.0",
   "private": true,
-  "porxy": "http://localhost:5001",
+  "porxy": "https://ecommerce-tawny-pi-19.vercel.app",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-regular-svg-icons": "^6.2.0",
