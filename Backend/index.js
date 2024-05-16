@@ -16,12 +16,6 @@ app.use('/products', productData);
 app.use('/user', users);
 app.use('/stripe', stripe);
 
-app.get("/",(req,res)=>{
-  res.json("hello");
-})
-
-
-
 
 mongoose
   .connect(CONNECTION_URL)
