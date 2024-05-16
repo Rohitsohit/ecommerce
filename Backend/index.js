@@ -20,11 +20,7 @@ app.get("/",(req,res)=>{
   res.json("hello");
 })
 
-// app.use(cors({
-//   origin: ["https://ecommerce-frontend-alpha-one.vercel.app/"],
-//   methods: ["POST", "GET"],
-//   credentials: true
-// }))
+
 
 
 mongoose
