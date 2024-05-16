@@ -16,7 +16,7 @@ app.use('/products', productData);
 app.use('/user', users);
 app.use('/stripe', stripe);
 
-app.get("/",(res,req)=>{
+app.get("/",(req,res)=>{
   res.json("hello");
 })
 
